@@ -25,8 +25,8 @@ half_average=(sum(test_list)/len(test_list))/2
 print('There are {} numbers less than half the average'.format(len([x for x in test_list if int(x)<half_average])))
 
 #C part
-TotalPostives=0
-TotalNegatives=0
+TotalPostives,TotalNegatives=0,0
+
 for i in test_list:
     if i<0:
         TotalNegatives+=1
