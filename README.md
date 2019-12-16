@@ -2,4 +2,4 @@
 Completed scripts for sampling 
 
 In ths repository we solve along with my collaborator several problems for educational
-purupose.It may be used as a sample script database i the future.
+purupose.It may be used as a sample script database in the future.
