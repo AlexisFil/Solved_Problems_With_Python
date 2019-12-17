@@ -15,7 +15,17 @@ minimum=min(test_list)
 print(f'The minimum value of list is {minimum}.')
 
 #find positions
-for i in range(0,1000):
-    if test_list[i]==minimum:
-        min_list.append(i+1)
-print('Minimum is located in positions {}.'.format(min_list))
+
+#First method
+
+# for i in range(0,1000):
+#     if test_list[i]==minimum:
+#         min_list.append(i+1)
+# print('Minimum is located in positions {}.'.format(min_list))
+
+#second method
+
+for i in test_list:
+    if i == minimum:
+        print("Minimum is in position {} ".format((test_list.index(i)+1)))
+        test_list[test_list.index(i)]+=1    #change the list to count next min in index
