@@ -3,6 +3,22 @@ This program enters the physical traits of a candidate
 and calculates his ability to enter a greek military school 
 using current and older data.'''
 
+class candidate():
+    '''A class for each candidate''' 
+        def __init__(self,sex,height,weight,status)
+		self.sex=sex
+		self.height=height
+		self.weight=weight
+		self.status=status
+
+
+
+
+
+
+
+
+
 def validate_data(data_type,prompt):
 	while True:
 		data=input(prompt)
@@ -36,13 +52,16 @@ def validate_data(data_type,prompt):
 			except:
 				print("Wrong data input")
 	return data
-def get_data():
-	print("I would like to know some data about the candidate:") 
-	sex =validate_data('sex',"Is the candidate \n(1)male or \n(2)female? \n>")
-	height = validate_data('height',"Give me the candidate height in cm\n>")
-	weight=validate_data('weight',"Give me the candidate's weight in kg.\n>")
-	
-	return sex,height,weight
+	def get_data():
+		print("I would like to know some data about the candidate:") 
+		name=input("Give me the candidate's first anme")
+        surname= input("Give me the candidate's last name")
+        name=name+' '+surname
+        sex =validate_data('sex',"Is the candidate \n(1)male or \n(2)female? \n>")
+		height = validate_data('height',"Give me the candidate height in cm\n>")
+		weight=validate_data('weight',"Give me the candidate's weight in kg.\n>")
+		status = 
+		return name,sex,height,weight,status
 
 def calculate_requirements(limit,height,weight):
 	dms = weight/(height**2)
@@ -64,7 +83,7 @@ def show_results(admission,admission_old):
 	else:
 		m=('The candidate cannot enter military school.')
 	return m
-    
+  
 #Main  Program
 #Set standards
 #Min Height current
@@ -83,6 +102,7 @@ height_female_old=1.55
 
 #Main Loop
 while True:
+	candidate_list=[]
 	#Exit
 	exit_option = input("Press q to exit or any key to continue")
 	if exit_option.upper()=='Q':
